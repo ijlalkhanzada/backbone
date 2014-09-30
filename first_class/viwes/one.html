@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Backbone</title>
+    <script src="../model/jquery-2.1.1.js"></script>
+    <script src="../model/underscore.js"></script>
+    <script src="../model/backbone.js"></script>
+</head>
+<body>
+<div class="contenar">
+
+</div>
+<script>
+   var MyView = Backbone.View.extend( {
+       tagName:"section",
+    //        tagName:"p",
+   //        tagName:"ul",
+  //        tagName:"tr ",
+ //        tagName:"ijlal ",
+           className:"ijlal1 ",
+           attributes:{
+                        id:'ijlal2 ',
+                        class:'khan',
+                       'data-record' :56
+        },
+
+        initialize:function(){
+            console.log('started',this)
+        },
+        render:function(){
+
+            this.$el.append ('<h2>hello word </h2>')
+            return this;
+
+        }
+    });
+    var v1 = new MyView();
+
+    console.log(v1)
+
+    $('.contenar ').append(v1.render().el );
+
+    //    console.log(Backbone)
+</script>
+</body>
+</html>
